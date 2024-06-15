@@ -1,0 +1,754 @@
+:root {
+  --whiteBackgroundRectangle1: #f6f8fc;
+  --blueBackgroundRectangle2: #213458;
+  --greenCompose: #1D7D81;
+  --greenComposeHover: #D2F2F3;
+  --main-bar-second-part-Text: #414141;
+  --lightBorders: #dfe1e5
+}
+
+main{
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+}
+
+.search-in-mail{
+  padding: 0.5vh;
+  border: 1px solid var(--lightBorders);
+  border-radius: 15px;
+  background-color: var(--whiteBackgroundRectangle1);
+  width: 35vw;
+  height: 2vh;
+}
+
+/* -------------------LEFT SIDE BAR-------------------*/
+.main-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+  margin-bottom: 5.5vh;
+}
+
+.rectangle2 {
+  background-color: var(--blueBackgroundRectangle2);
+  height: 100vh;
+  width: 3.5vw;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rectangle1 {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--whiteBackgroundRectangle1);
+  height: 100vh;
+  float: left;
+}
+
+.main-bar-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5.5em;
+}
+
+.main-bar {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  /* margin-right: 35px;
+    margin-top: 50px; */
+  margin-top: 2rem;
+  padding-left: 1rem;
+  border-style: none;
+  justify-content: left;
+}
+
+.main-bar:hover {
+  background-color: var(--whiteBackgroundRectangle1);
+  color: #213458;
+  font-size: 16px;
+  /* margin-right: 35px;
+    margin-top: 50px; */
+  margin-top: 2rem;
+  border-style: none;
+  border-radius: 1.3rem 0rem 0rem 1.3rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.main-bar img {
+  transition: filter 0.3s ease;
+}
+
+.main-bar:hover img {
+  filter: invert(30%) hue-rotate(10deg);
+}
+
+.main-bar.active {
+  background-color: var(--whiteBackgroundRectangle1);
+  color: #213458;
+  font-size: 16px;
+  /* margin-right: 35px;
+    margin-top: 50px; */
+  margin-top: 2rem;
+  border-style: none;
+  border-radius: 1.3rem 0rem 0rem 1.3rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.no-bullets {
+  list-style-type: none;
+}
+
+.compose {
+  color: white;
+  background-color: var(--greenCompose);
+  font-size: 20px;
+  font-weight: bold;
+  margin: 2vh 0.5vw;
+  padding: 0.3vh 10vh 0.3vh 0.3vh;
+  border-radius: 0.4rem;
+  border-color: transparent;
+  transition: 0.4s ease all;
+  letter-spacing: 1px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.compose:focus {
+  outline-style: auto;
+  outline-color: var(--greenCompose);
+  background-color: white;
+  color: var(--greenCompose);
+}
+
+.compose:hover {
+  box-shadow: var(--greenComposeHover) 0px 4px 3px 5px;
+  transition: .1s ease;
+}
+
+.fa-pen {
+  width: 1vw;
+  height: 1vw;
+  color: white;
+  /* Original color */
+  transition: color 0.3s ease;
+  /* Transition for color change */
+}
+
+.fa-pen:hover {
+  color: var(--greenCompose);
+  transition: color 0.3s ease;
+}
+
+.main-bar-second-part {
+  color: var(--main-bar-second-part-Text);
+  background-color: var(--whiteBackgroundRectangle1);
+  font-size: 16px;
+  margin: 0.25vh 0.5vw;
+  padding: 0.3vh 0vh 0.3vh 0.3vh;
+  border-radius: 0.4rem;
+  border-color: transparent;
+  transition: 0.4s ease all;
+  text-align: left;
+}
+
+.main-bar-second-part:hover {
+  background-color: var(--greenComposeHover);
+  color: black;
+  font-size: 16px;
+  margin: 0.25vh 0.5vw;
+  border-radius: 0.4rem;
+  transition: 0.1s ease all;
+  text-align: left;
+  cursor: pointer;
+}
+
+span {
+  height: 12vh;
+}
+
+/* -------------------LEFT SIDE BAR END-------------------*/
+
+/* -------------------UP SIDE BAR-------------------*/
+.upside-bar {
+  background-color: var(--whiteBackgroundRectangle1);
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items:center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.navbar-left {
+  margin-right: 10vw;
+  margin-left: 20px;
+}
+
+/* ----------------CHECKBOX SORT BAR-------------- */
+#checkbox {
+  align-items: center;
+  padding: 6px;
+  cursor: pointer;
+  background-color: var(--greenComposeHover);
+  border: 1px solid #dfe1e5;
+  border-radius: 5px;
+  float: left;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#checkbox:hover {
+  background-color: #f1f3f4;
+}
+
+.sort-by {
+  border: 1px solid var(--lightBorders);
+  border-radius: 5px;
+  /* Rounded corners */
+  background-color: #D2F2F3;
+  color: var(--main-bar-second-part-Text);
+  cursor: pointer;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.sort-by:hover {
+  /* Sort hover */
+  background-color: #f1f3f4;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: gray;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: var(--whiteBackgroundRectangle1);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  color: black;
+  top: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  background-color: var(--whiteBackgroundRectangle1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border-radius: 8px;
+}
+
+.popup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.popup input {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.popup.active {
+  display: block; /* Show when active */
+}
+
+.close-btn {
+  background-color: transparent;
+  border: none;
+  color: #aaa;
+  font-size: 16px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+/* --------------CHECKBOX SORT BAR END-------------- */
+
+/* ----------------SEARCH BAR CENTER----------------- */
+#recipient,
+#subject,
+#search-in-mail
+ {
+  padding: 0.5vh;
+  border: 1px solid var(--lightBorders);
+  border-radius: 15px;
+  background-color: var(--whiteBackgroundRectangle1);
+  width: 30vw;
+  height: 2vh;
+}
+
+#recipient:focus,
+#subject:focus,
+#search-in-mail:focus {
+  outline-style: auto;
+  outline-color: var(--greenCompose);
+  width: 30vw;
+}
+
+#recipient:hover,
+#subject:hover,
+#search-in-mail:focus {
+  box-shadow: #dfe1e5 0px 0px 5px, #dfe1e5 0px 0px 5px;
+  transition: .2s ease;
+}
+
+.search-bar {
+  margin-left: 10vw;
+}
+
+/* -------------------SEARCH BAR CENTER END------------- */
+
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* -----------------PROFILE BAR RIGHT -------------------*/
+.profile-right-bar {
+  margin-left: 12vw;
+}
+
+#profileBtn {
+  border: 1px solid var(--lightBorders);
+  border-radius: 5px;
+  /* Rounded corners */
+  background-color: #D2F2F3;
+  color: var(--main-bar-second-part-Text);
+  cursor: pointer;
+}
+
+#profileBtn:hover {
+  /* Sort hover */
+  background-color: #f1f3f4;
+}
+
+
+#faq {
+  border: 1px solid var(--lightBorders);
+  border-radius: 5px;
+  /* Rounded corners */
+  background-color: #D2F2F3;
+  color: var(--main-bar-second-part-Text);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#faq:hover {
+  /* Sort hover */
+  background-color: #f1f3f4;
+}
+
+.profile-options {
+  display: none;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 7%;
+  right: 10%;
+  text-align: center;
+
+}
+
+.profile-options img {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 5%;
+}
+
+.profile-options .account-settings-btn {
+  background-color: var(--greenCompose);
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.profile-options button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 5px;
+}
+
+.profile-options button:hover {
+  background-color: #f0f0f0;
+}
+
+/* ----------------PROFILE BAR RIGHT END-----------------*/
+
+/* -------------------UP SIDE BAR END-------------------*/
+
+.lala {
+  color: #000000;
+}
+
+.navbar {
+  background-color: #ffffff;
+  color: #202124;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.search-input {
+  flex: 1;
+  margin: 0 400px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #dfe1e5;
+  border-radius: 20px;
+  background-color: lightblue;
+  color: #202124;
+  text-align: center;
+}
+
+.search-input::placeholder {
+  text-align: center;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-button {
+  padding: 8px;
+  border: 1px solid #dfe1e5;
+  border-radius: 20px;
+  background-color: #bee3f8;
+  color: #70757a;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #c5e1f7;
+}
+
+.status-button {
+  padding: 8px;
+  border: 1px solid #dfe1e5;
+  border-radius: 20px;
+  background-color: #bee3f8;
+  color: #70757a;
+  cursor: pointer;
+  position: relative;
+  left: -40px;
+}
+
+.active,
+.dnd,
+.away {
+  color: #202124;
+}
+
+.active {
+  background-color: #b4f5ba;
+  border-color: #4caf50;
+
+}
+
+.dnd {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+}
+
+.away {
+  background-color: #e2e3e5;
+  border-color: #6c757d;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: var(--main-bar-second-part-Text);
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f3f4;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* -------------------Write Button-------------------*/
+.email-popup {
+  display: none;
+  position: fixed;
+  left: 80%;
+  top: 85%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  background-color: var(--whiteBackgroundRectangle1);
+  padding: 20px;
+  z-index: 1000;
+  width: 35em;
+  height: 60em;
+  border-radius: 10px;
+}
+
+.email-popup-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#message {
+  width: calc(100% - 40px);
+  height: 40vh;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+#message:focus {
+  outline: none;
+  border-color: #213458;
+}
+
+#SenderR-S {
+  border-radius: 5px;
+  width: calc(100% - 40px);
+  padding: 8px;
+  border: 0.1px thin #dfe1e5;
+  margin-bottom: 5px;
+
+}
+
+#send-button {
+  border-radius: 20px;
+  font-weight: bold;
+  color: var(--whiteBackgroundRectangle1);
+  background-color: var(--greenCompose);
+  width: 5vw;
+  height: 3.5vh;
+  margin-top: 0;
+}
+
+#send-button:hover {
+  box-shadow: var(--greenCompose) 0px 0px 5px, var(--greenCompose) 0px 0px 5px;
+  transition: .2s ease;
+  background-color: var(--greenComposeHover);
+  color: var(--main-bar-second-part-Text);
+}
+
+.custom-file-input-label {
+  display: inline-block;
+  width: 20px;
+  height: 24px;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M364.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg>');
+  border-radius: 40%;
+  cursor: pointer;
+  margin-left: 27vw;
+  margin-top: 2vh;
+}
+
+#fileInput {
+  display: none;
+}
+
+.custom-file-input-label:hover {
+  box-shadow: var(--greenComposeHover) 0px 0px 6px, var(--greenComposeHover) 0px 0px 6px;
+  background-color: var(--greenComposeHover);
+}
+
+
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--greenCompose);
+  text-align: center;
+  line-height: 20px;
+  color: var(--greenComposeHover);
+}
+
+.close:hover {
+  color: var(--greenCompose);
+  background-color: var(--greenComposeHover);
+  color: var(--main-bar-second-part-Text);
+  box-shadow: var(--greenCompose) 0px 0px 5px, var(--greenCompose) 0px 0px 5px;
+  transition: .2s ease;
+}
+
+textarea{
+  resize: none;
+  width: 25vw;
+  height: 300px;
+}
+/* -------------------Write Button end-------------------*/
+
+/* -------------------
+
+em - text, main element
+rem - depends of em
+vh - for hight
+vw - for width
+
+-------------------*/
+.email-item {
+  justify-content: center;
+  align-content: center;
+  border-style: groove;
+  padding: 10px;
+
+  background-color: #fff;
+}
+
+.email-header {
+  display: flex;
+  align-items: center;
+  display: flex;
+}
+
+.email-sender {
+
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.email-date {
+  font-size: 15px;
+  color: #666;
+
+}
+
+.email-subject {
+  margin-left: 30px;
+  font-weight: bold;
+
+}
+
+.email-content{
+  margin-left: 30px;
+  width: 70%;
+}
+.email-actions {
+  display: flex;
+  align-items: center;
+}
+
+.star-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.star-btn i {
+  color: #ffd700; /* Yellow color for star */
+}
+
+.select-checkbox {
+  cursor: pointer;
+}
+/* Example of using Font Awesome icons */
+.fa-paperclip::before {
+  content: "\f0c6"; /* Unicode for paperclip icon */
+}
+
+.success-popup {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+  font-size: 18px;
+}
+
+
+/* Example of responsive design */
+@media (max-width: 600px) {
+  .email-item {
+    padding: 8px;
+  }
+}
+
+
+.message-details {
+  padding: 322px;
+  background-color: #fff;
+}
+
+.message-details h2 {
+  margin-top: 0;
+}
+
+.message-details button {
+  margin-bottom: 20px;
+}

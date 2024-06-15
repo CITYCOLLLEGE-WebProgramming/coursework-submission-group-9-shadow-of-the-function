@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    /* Hide overflow */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(rgb(117, 211, 255) 0%, rgb(147, 236, 248) 35%, #B7E8EB 100%);
+}
+
+#login-signup {
+    display: flex;
+    justify-content: center;
+    padding: 20.7vh;
+}
+
+#login-form {
+    /* position: absolute; */
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    /* Add transition for smoother animation */
+}
+
+#signup-form {
+    /* position: absolute; */
+    opacity: 1;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    /* Add transition for smoother animation */
+}
+
+
+.logIn {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15vh 4vw 8vh 30vw;
+    position: relative;
+    height: 35.5vh;
+}
+
+.signUp{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15vh 30vw 8vh 4vw;
+    position: relative;
+    height: 35.5vh;
+
+}
+
+#signup-fname,
+#signup-lname,
+#signup-emai,
+#signup-pass,
+#signup-tel {
+    width: 20vh;
+    padding: 0.8vh;
+    border-radius: 5px;
+    border: 0.2px solid #ccc;
+    font-size: 16px;
+}
+
+#signup-fname,
+#signup-lname,
+#signup-emai,
+#signup-pass,
+#signup-tel  {
+    outline: none;
+    border-color: #007bff;
+    /* Blue color when input is focused */
+
+}
+
+.button-transform {
+    position: absolute;
+    /* background-color: red; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* z-index: 1; */
+    height: 50vh;
+
+    /* transform-origin: center center; Set the transform origin to the center of the button */
+}
+
+.overlay-btn {
+    background: none;
+    border: none;
+    padding: 10%;
+    cursor: pointer;
+    width: 500px;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /* Ensure the content is above the forms */
+    text-align: center;
+    /* Center align the content */
+}
+
+@keyframes spinForwards {
+    from {
+        -ms-transform: rotate(0turn);
+        /* IE 9 */
+        -webkit-transform: rotate(0turn);
+        /* Chrome, Safari, Opera */
+        transform: rotate(0turn);
+    }
+
+    to {
+        -ms-transform: rotate(0.5turn);
+        /* IE 9 */
+        -webkit-transform: rotate(0.5turn);
+        /* Chrome, Safari, Opera */
+        transform: rotate(0.5turn);
+    }
+}
+
+@keyframes spinBackwards {
+    from {
+        -ms-transform: rotate(0.5turn);
+        /* IE 9 */
+        -webkit-transform: rotate(0.5turn);
+        /* Chrome, Safari, Opera */
+        transform: rotate(0.5turn);
+    }
+
+    to {
+        -ms-transform: rotate(0turn);
+        /* IE 9 */
+        -webkit-transform: rotate(0turn);
+        /* Chrome, Safari, Opera */
+        transform: rotate(0turn);
+    }
+}
+
+.spin-forwards {
+    animation: spinForwards 0.5s linear forwards;
+    transform-origin: center center;
+    /* Adjust the origin based on the image's position */
+}
+
+.spin-backwards {
+    animation: spinBackwards 0.5s linear forwards;
+    transform-origin: center center;
+    /* Adjust the origin based on the image's position */
+}
+
+.spin-forwards-text {
+    animation: spinForwards 0s linear forwards;
+    transform-origin: center center;
+    /* Adjust the origin based on the image's position */
+}
+
+.spin-backwards-text {
+    animation: spinBackwards 0s linear forwards;
+    transform-origin: center center;
+    /* Adjust the origin based on the image's position */
+}
+
+.ocean {
+    height: 5%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #015871;
+    z-index: -100;
+}
+
+.wave {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+    position: absolute;
+    width: 6400px;
+    top: -198px;
+    left: 0;
+    height: 198px;
+    transform: translate(0, 0, 0);
+    animation: wave 7s ease infinite;
+}
+
+.wave:nth-of-type(2) {
+    top: -168px;
+    animation: swell 4s ease infinite;
+    opacity: 1;
+}
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+@keyframes swell {
+
+    0%,
+    100% {
+        transform: translate(0, -30px);
+    }
+
+    50% {
+        transform: translate(0, 5px);
+    }
+}
+
+.text-button {
+    margin: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10%;
+}
+
+.sign-up{
+    font-size: 20px;
+    color:#B7E8EB;
+    background: linear-gradient(rgb(79, 79, 112) 0%, rgb(83, 57, 215) 35%, rgb(65, 104, 232)100%);
+}
